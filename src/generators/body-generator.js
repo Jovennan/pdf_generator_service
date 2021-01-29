@@ -1,5 +1,10 @@
-const constants = require('../utils/constants');
-
-exports.generate = (doc) => {
-  doc.fontSize(constants.FONT_SIZE_DEFAULT).text('Body');
+exports.generate = (doc, data) => {
+  doc.text(data.body.txt, {
+    columns: 3,
+    columnGap: 15,
+    height: 100,
+    width: 465,
+    align: 'center',
+  });
+  doc.moveDown();
 };

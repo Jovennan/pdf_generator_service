@@ -1,6 +1,7 @@
 const PDFDocument = require('pdfkit');
 const headerGenerator = require('./generators/header-generator');
 const bodyGenerator = require('./generators/body-generator');
+const constants = require('./utils/constants');
 
 exports.generate = (req, res) => {
   const data = req.body;
@@ -15,6 +16,9 @@ exports.generate = (req, res) => {
     },
     layout: 'portrait',
   });
+
+  doc.fontSize(constants.FONT_SIZE_DEFAULT);
+  doc.font(constants.FONT_DEFAULT);
 
   headerGenerator.generate(doc, data);
   bodyGenerator.generate(doc, data);
