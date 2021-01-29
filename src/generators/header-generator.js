@@ -1,3 +1,5 @@
+const constants = require('../utils/constants');
+
 exports.generate = (doc) => {
-  doc.fontSize(25).text('Header', 100, 100);
+  doc.fontSize(constants.FONT_SIZE_DEFAULT).text('Header');
 };

@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 const PORT = 8080;
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', 'attachment; filename=report.pdf');
 
