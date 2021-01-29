@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
+    "build": "npm ci --only=production",
     "prod": "node src/server.js"
   },
   "repository": {
@@ -20,9 +21,14 @@
   },
   "homepage": "https://github.com/DenysLins/pdf_generator_service#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pdfkit": "^0.11.0"
   },
   "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.7"
   }
 }
